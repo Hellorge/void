@@ -1,4 +1,6 @@
 <div class="work-window">
-  <h2>{{ include.name }}</h2>
-  <iframe src="{{ include.path }}" frameborder="0"></iframe>
+  <a href="{{ include.path | absolute_url }}">
+    <h2>{{ include.name }}</h2>
+  </a>
+  <iframe class="demo-frame" src="{{ include.path }}" frameborder="0"></iframe>
 </div>
