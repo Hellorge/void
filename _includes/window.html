@@ -2,5 +2,5 @@
   <a href="{{ include.path | absolute_url }}">
     <h2>{{ include.name }}</h2>
   </a>
-  <iframe class="demo-frame" src="{{ include.path }}" frameborder="0"></iframe>
+  <iframe class="demo-frame" src="{{ include.path | absolute_url}}" frameborder="0"></iframe>
 </div>
