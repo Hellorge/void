@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% assign works = site.static_files | where_exp:"file", "file.path contains 'works'" %}
+
+<div class="works-container">
+  {% for file in works %}
+    {% include window.html path=file.path name=file.name base=file.basename %}
+  {% endfor %}
+</div>
