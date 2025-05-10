@@ -1,5 +1,6 @@
 {% for file in site.static_files %}
     {% if file.path contains "works" %}
-        {% include window.html path=file.path name=file.name base=file.basename %}
+    <iframe class="demo-frame" src="{{ file.path | absolute_url }}"></iframe>
+    <a href="{{ file.path | absolute_url }}">{{ file.basename }}</a>
     {% endif %}
 {% endfor %}
